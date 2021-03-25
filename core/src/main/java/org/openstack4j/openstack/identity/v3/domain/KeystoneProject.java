@@ -20,7 +20,7 @@ import org.openstack4j.openstack.common.ListResult;
  */
 @JsonRootName("project")
 /* If we don't explicitly set extra as an ignore property, it will methods with @JsonAnyGetter/Setter will not work */
-@JsonIgnoreProperties(value = "extra", ignoreUnknown = true)
+@JsonIgnoreProperties(value = {"extra", "options"}, ignoreUnknown = true)
 public class KeystoneProject implements Project {
 
     private static final long serialVersionUID = 1L;
